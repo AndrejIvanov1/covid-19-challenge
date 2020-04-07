@@ -1,6 +1,6 @@
 # covid-19-challenge
 
-In this repository, [Carlos Gomes](https://github.com/CarlosGomes98) and I work on the [Kaggle COVID-19 Open Research Challenge](https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge). The data can be downloaded from Kaggle.
+In this repository, [Carlos Gomes](https://github.com/CarlosGomes98) and I work on the [Kaggle COVID-19 Open Research Challenge](https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge). The data can be downloaded from Kaggle. **Please place these files in a folder named 'data'**.
 
 In short, the aim of the challenge is to attempt to find answers to multiple COVID-19 related questions in a corpus of biomedical articles published on the topic.
 
