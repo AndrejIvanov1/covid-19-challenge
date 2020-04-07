@@ -6,7 +6,7 @@ In short, the aim of the challenge is to attempt to find answers to multiple COV
 
 To replicate, clone this repository and create a conda environment with the necessary packages by running ```conda env create -f conda_env.yml```. Activate the environment with ```conda activate ml```.  
 
-1) **data_preprocessing.ipynb** aggregates the articles into a single file and performs some pre-processing on the text. **It is necessary to run this notebook first so as to produce the clean data required for the other notebooks**.
+1) **data_preprocessing.ipynb** aggregates the articles into a single file and performs some pre-processing on the text. **IT IS NECESSARY TO RUN THIS NOTEBOOK FIRST SO AS TO PRODUCE THE CLEAN DATA REQUIRED FOR THE OTHER NOTEBOOKS**.
 2) **LDA.ipynb** performs Latent Dirichlet Allocation (LDA) topic modelling on the abstracts of the papers.
 3) **LDA-answer-finding.ipynb** tries to answer some of the questions using the topics from LDA.
 4) **Embeddings.ipynb** tries to answer the questions using different types of word embeddings.
