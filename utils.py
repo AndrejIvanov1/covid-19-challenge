@@ -4,14 +4,12 @@ from itertools import islice
 import torch
 import torch.nn.functional as F
 
-def get_query_embedding(tokenizer, model, query, max_length=30):
+def get_query_embedding(tokenizer, model, query):
     # sent model works differently
     if tokenizer is None:
         return torch.tensor(model.encode([query]))
     
     query_enc = tokenizer.encode(query, add_special_tokens=True)
-    for i in range(len(query_enc), max_length):
-        query_enc.append(0)
     query_enc = torch.tensor([query_enc])
     with torch.no_grad():
         query_output = model(query_enc)
@@ -58,6 +56,8 @@ def take(n, iterable):
     return list(islice(iterable, n))
 
 def cosine_similarity(first, second):
+    first = first.squeeze()
+    second = second.squeeze()
     with torch.no_grad():
         numerator = torch.dot(first, second)
         denominator = torch.norm(first) * torch.norm(second)
@@ -66,7 +66,7 @@ def cosine_similarity(first, second):
 def sentence_embedding(tokenizer, model, sentence, average=False):
     # sent model works differently
     if tokenizer is None:
-        return torch.tensor(model.encode([query]))
+        return torch.tensor(model.encode([sentence]))
         
     encoded = tokenizer.encode(sentence, add_special_tokens=True)
     with torch.no_grad():
