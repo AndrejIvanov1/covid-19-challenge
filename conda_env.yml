@@ -147,5 +147,6 @@ dependencies:
     - sentence-transformers==0.2.5.1
     - sentencepiece==0.1.85
     - transformers==2.3.0
+    - rank-bm25==0.2
 prefix: C:\Users\User\Anaconda3\envs\ml
 
